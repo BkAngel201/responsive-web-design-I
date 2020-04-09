@@ -257,7 +257,7 @@ footer {
 	background-size: cover;
 }
 .about-page .header-text h1 {
-	padding-top: 130px;
+	padding-top: 80px;
 }
 
 .service-page .header-text {
@@ -305,14 +305,13 @@ section.services-facts ul {
 @media only screen and (max-width: 800px) {
     .container,
 	header .header-text,
-    header .header-img,
     header nav,
     header nav ul,
 	section.link-section .links-twoSpaces,
 	section.link-section .links-threeSpaces,
 	section.services-section .service-box,
-	section.services-facts .text-description,
-	section.services-facts img {
+	section.services-facts .text-description
+	 {
 	  width: 100%;
 	}
     header nav  {
@@ -322,22 +321,12 @@ section.services-facts ul {
         flex-grow: 1;
     }
     header nav .logo-link {
-        margin: auto;
+        margin: 30px auto;
     }
-}
-
-@media only screen and (max-width: 500px) {
-	.container,
-	header .header-text,
-	header .header-img,
-	section.link-section .links-twoSpaces,
-	section.link-section .links-threeSpaces,
-	section.services-section .service-box,
-	section.services-facts .text-description,
-	section.services-facts img {
-	  width: 100%;
-	}
-	section.link-section,
+    header .header-img {
+        display: none;
+    }
+    section.link-section,
 	section.contact-section,
 	section.whoWeAre-section,
 	section.page-description,
@@ -345,10 +334,32 @@ section.services-facts ul {
 	section.services-facts  {
 		padding-left: 30px;
 		padding-right: 30px;
+    }
+    section.link-section .links-twoSpaces,
+    section.link-section .links-threeSpaces {
+        margin-bottom: 30px;
+    }
+    section.services-facts .text-description {
+		margin-bottom: 30px;
+    }
+    section.whoWeAre-section .headboard-list {
+		flex-wrap: wrap;
+		justify-content: space-around;
+    }
+    header .header-text {
+        margin-top: 190px;
+    }
+    
+    .service-page .header-text,
+    .about-page .header-text {
+		margin-top: 140px;
 	}
-	nav img {
-		display: none;
-	}
+}
+
+@media only screen and (max-width: 500px) {
+	section.services-facts img {
+        width: 100%;
+    }
 	header,
 	section.services-facts {
 		flex-flow: column;
@@ -362,16 +373,18 @@ section.services-facts ul {
 	}
 	nav li a::after {
 		z-index: 1;
+    }
+    header .header-text {
+        margin-top: 30px;
+    }
+
+    .service-page .header-text,
+    .about-page .header-text {
+		margin-top: 0px;
 	}
-	section.whoWeAre-section .headboard-list {
-		flex-wrap: wrap;
-		justify-content: space-around;
-	}
-	.service-page .header-text {
-		margin-top: 0;
-	}
-	section.services-facts .text-description {
-		margin-bottom: 30px;
-	}
+	header nav .logo-link {
+        margin: 0 auto;
+    }
+	
 
   }
